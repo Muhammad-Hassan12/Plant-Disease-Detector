@@ -73,7 +73,7 @@ The final deployed model uses **Strategy 4**.
 │── 📂 Deploy/                        Deployment Files
     │── 📜 app.py
     │── 📜 model_4_mobilenet_finetuned.keras
-    │── 📜 requirments.txt
+    │── 📜 requirements.txt
 │── 📂 Models/                        Contains last 2 Models! (Because the first 2 were to large to upload :) )
     │── 📜 model_3_mobilenet_frozen.keras               # Model trained with the frozen weights of "MobileNetV2"
     │── 📜 model_3_mobilenet_finetuned.keras            # This one is the "Final Product"!
