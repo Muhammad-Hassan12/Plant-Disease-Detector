@@ -139,4 +139,4 @@ This AI tool is intended for educational and assistive purposes. While highly ac
 This project is licensed under the MIT License!
 
 ##  Little Appriciation MSG :)
-All thanks to **Kaggle** for letting us(poor) use free GPU processing for **12 Hours Straight**, Unlike **Google Colab** which offer 2 hour session a day!
+All thanks to **Kaggle** for letting us(poor) use free GPU processing for **12 Hours Straight**, Unlike **Google Colab** which offer 2 hour session!
