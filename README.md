@@ -84,6 +84,7 @@ The final deployed model uses **Strategy 4**.
 │── 📂 Training_Graph/                                  # Contains all the graphs of all the models :)
 │── 📜 requirements.txt                                 # Requirments to download it before testing and training(If you want!) 
 │── 📜 README.md                      # Project documentation
+│── 📜 LICENSE
 ```
 
 ## 🌿 Supported Classes
