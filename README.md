@@ -46,7 +46,7 @@ The final deployed model uses **Strategy 4**.
 3.  **Data Augmentation:** Integrated random flip, rotation, and zoom layers that activate only during training.
 4.  **Fine-Tuning:** The top 55 layers of the base model were unfrozen and retrained to adapt specifically to plant leaf textures.
 
-![Training Graphs](path/to/your/graph_image.png)
+![Training Graphs](Training_Graphs/model_4_mobilenet_finetuned.png)
 *(Training vs Validation Accuracy & Loss for the Final Model)*
 
 ## 🚀 Installation & Local Run
