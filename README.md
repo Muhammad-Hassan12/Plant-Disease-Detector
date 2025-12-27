@@ -6,14 +6,14 @@
 ![Accuracy](https://img.shields.io/badge/Accuracy-98.75%25-green)
 
 ## 📖 Overview
-This project is an end-to-end Deep Learning application capable of identifying **38 different plant diseases** from leaf images. Built using **TensorFlow/Keras** and deployed with **Streamlit**, it uses Transfer Learning with the **MobileNetV2** architecture to achieve high accuracy (~99%) while remaining lightweight and fast.
+This project is an end-to-end Deep Learning application capable of identifying **38 different plant diseases** from leaf images. Built using **TensorFlow/Keras** and deployed with **Streamlit**, the final model utilizes Transfer Learning with **MobileNetV2** to achieve high accuracy (~99%) while remaining lightweight and fast.
 
 This tool is designed to assist farmers and agricultural experts in early disease detection to prevent crop loss.
 
 ## ✨ Features
 * **High Accuracy:** Achieved **98.75%** test accuracy on the PlantVillage dataset.
 * **38 Class Classification:** Detects diseases across 14 distinct crop species (Apple, Tomato, Corn, etc.).
-* **Robust Model:** Uses Fine-Tuned MobileNetV2 with baked-in data augmentation.
+* **Robust Model:** Built after rigorous experimentation with 4 different model strategies.
 * **User-Friendly Interface:** Simple web app built with Streamlit for easy image uploading and analysis.
 * **Real-time Inference:** Fast predictions using optimized model architecture.
 
@@ -25,25 +25,51 @@ This tool is designed to assist farmers and agricultural experts in early diseas
 * **Data Visualization:** Matplotlib (for training history)
 
 ## 📊 Dataset
-The model was trained on the **New Plant Diseases Dataset** "Link:https://www.kaggle.com/datasets/vipoooool/new-plant-diseases-dataset", which consists of approximately 87,000 RGB images of healthy and diseased crop leaves categorized into 38 classes.
+The model was trained on the **PlantVillage Dataset** (Augmented), which consists of approximately 87,000 RGB images of healthy and diseased crop leaves categorized into 38 classes.
 
-## 🧠 Model Architecture & Training
-The model uses a **Transfer Learning** approach:
-1.  **Base Model:** MobileNetV2 (Pre-trained on ImageNet), chosen for its efficiency.
-2.  **Preprocessing:** Inputs are scaled to `[-1, 1]` using MobileNet's standard preprocessing.
-3.  **Data Augmentation:** Random Flip, Rotation, and Zoom layers are integrated directly into the model pipeline.
-4.  **Training Strategy:**
-    * **Phase 1:** Feature Extraction (Base model frozen, Top layers trained).
-    * **Phase 2:** Fine-Tuning (Top 55 layers of base model unfrozen, trained with a very low learning rate `1e-4`).
+## 🧠 Model Training & Experimentation
+To ensure the best performance, **4 different experimental strategies** were conducted. The final model was selected based on validation accuracy, loss stability, and ability to generalize on unseen data.
 
-### Performance
-* **Training Accuracy:** ~99%
-* **Validation Accuracy:** ~98%
-* **Test Accuracy:** **99.17%**
+### 🔬 The 4 Experiments:
 
-*(You can add your training graphs here by uploading `image_49d73c.png` to your repo and linking it)*
+| Exp | Strategy | Description | Outcome |
+| :-- | :--- | :--- | :--- |
+| **1** | **Simple CNN** | A basic Custom CNN trained from scratch. | Moderate accuracy, struggled with complex features. |
+| **2** | **CNN + Augmentation** | Same CNN but with Data Augmentation (Flip, Rotation, Zoom). | Better generalization, but training was slow. |
+| **3** | **Transfer Learning (Feature Extraction)** | **MobileNetV2** (Frozen base) + Custom Head. | High accuracy, very fast convergence. |
+| **4** | **Transfer Learning (Fine-Tuning)** | **MobileNetV2** (Unfrozen top layers) + Fine-tuning with low learning rate (`1e-4`). | **🏆 Best Performance (98.75% Accuracy)** |
+
+### 🏆 Final Model: MobileNetV2 Fine-Tuned
+The final deployed model uses **Strategy 4**.
+1.  **Base Model:** MobileNetV2 (Pre-trained on ImageNet).
+2.  **Preprocessing:** Baked directly into the model layers (rescaling pixels to `[-1, 1]`).
+3.  **Data Augmentation:** Integrated random flip, rotation, and zoom layers that activate only during training.
+4.  **Fine-Tuning:** The top 55 layers of the base model were unfrozen and retrained to adapt specifically to plant leaf textures.
+
 ![Training Graphs](path/to/your/graph_image.png)
+*(Training vs Validation Accuracy & Loss for the Final Model)*
 
+## 🚀 Installation & Local Run
 
+1.  **Clone the Repository**
+    ```bash
+    git clone [https://github.com/YOUR_USERNAME/plant-disease-detection.git](https://github.com/YOUR_USERNAME/plant-disease-detection.git)
+    cd plant-disease-detection
+    ```
+
+2.  **Install Dependencies**
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+3.  **Run the App**
+    ```bash
+    streamlit run app.py
+    ```
+
+4.  **Use the App**
+    * Open your browser at `http://localhost:8501`
+    * Upload a leaf image (JPG/PNG)
+    * View the predicted disease and confidence score.
 
 ## 📂 Directory Structure
