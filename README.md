@@ -83,5 +83,5 @@ The final deployed model uses **Strategy 4**.
     │── 📜 app.py                                       #To test the model by your self on local machine
 │── 📂 Training_Graph/                                  # Contains all the graphs of all the models :)
 │── 📜 requirements.txt                                 # Requirments to download it before testing and training(If you want!) 
-│── 📜 README.md                      # Project documentation (this file)
+│── 📜 README.md                      # Project documentation
 ```
