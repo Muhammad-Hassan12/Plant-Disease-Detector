@@ -53,8 +53,8 @@ The final deployed model uses **Strategy 4**.
 
 1.  **Clone the Repository**
     ```bash
-    git clone [https://github.com/YOUR_USERNAME/plant-disease-detection.git](https://github.com/YOUR_USERNAME/plant-disease-detection.git)
-    cd plant-disease-detection
+    git clone https://github.com/Muhammad-Hassan12/Plant-Disease-Detector.git
+    cd Plant-Disease-Detector
     ```
 
 2.  **Install Dependencies**
@@ -62,14 +62,26 @@ The final deployed model uses **Strategy 4**.
     pip install -r requirements.txt
     ```
 
-3.  **Run the App**
+3.  **Run the App and give it the Image for test**
     ```bash
-    streamlit run app.py
+    streamlit run app.py --image your_image_for_test.jpg
     ```
 
-4.  **Use the App**
-    * Open your browser at `http://localhost:8501`
-    * Upload a leaf image (JPG/PNG)
-    * View the predicted disease and confidence score.
-
 ## 📂 Directory Structure
+```console
+📦 Plant-Disease-Detector
+│── 📂 Deploy/                        Deployment Files
+    │── 📜 app.py
+    │── 📜 model_4_mobilenet_finetuned.keras
+    │── 📜 requirments.txt
+│── 📂 Models/                        Contains last 2 Models! (Because the first 2 were to large to upload :) )
+    │── 📜 model_3_mobilenet_frozen.keras               # Model trained with the frozen weights of "MobileNetV2"
+    │── 📜 model_3_mobilenet_finetuned.keras            # This one is the "Final Product"!
+│── 📂 Notebooks/
+    │── 📜 Complete Model Training.ipynb                # Complete Training Notebook!
+│── 📂 Test_Model/
+    │── 📜 app.py                                       #To test the model by your self on local machine
+│── 📂 Training_Graph/                                  # Contains all the graphs of all the models :)
+│── 📜 requirements.txt                                 # Requirments to download it before testing and training(If you want!) 
+│── 📜 README.md                      # Project documentation (this file)
+```
