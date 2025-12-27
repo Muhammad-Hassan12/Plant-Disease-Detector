@@ -133,3 +133,6 @@ The model can detect the following 38 classes:
 
 ## ⚠️ Disclaimer
 This AI tool is intended for educational and assistive purposes. While highly accurate, diagnoses should be confirmed by agricultural experts before taking large-scale chemical or biological action!
+
+## 📜 License
+This project is licensed under the MIT License!
