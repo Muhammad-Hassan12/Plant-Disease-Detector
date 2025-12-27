@@ -70,6 +70,7 @@ The final deployed model uses **Strategy 4**.
 ## 📂 Directory Structure
 ```console
 📦 Plant-Disease-Detector
+│── 📂 .devcontainer/                 Extras
 │── 📂 Deploy/                        Deployment Files
     │── 📜 app.py
     │── 📜 model_4_mobilenet_finetuned.keras
