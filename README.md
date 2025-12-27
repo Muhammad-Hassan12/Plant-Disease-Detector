@@ -1,6 +1,6 @@
 # 🌿 Plant Disease Detection AI
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)]([YOUR_STREAMLIT_APP_LINK_HERE](https://plant-disease-detector-tufcjbdefrpegvxdbdmkqi.streamlit.app/))
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://plant-disease-detector-tufcjbdefrpegvxdbdmkqi.streamlit.app/)
 ![Python](https://img.shields.io/badge/Python-3.10%2B-blue)
 ![TensorFlow](https://img.shields.io/badge/TensorFlow-2.x-orange)
 ![Accuracy](https://img.shields.io/badge/Accuracy-98.75%25-green)
